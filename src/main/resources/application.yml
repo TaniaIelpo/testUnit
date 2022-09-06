@@ -1,0 +1,24 @@
+spring:
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/develhopedb
+    username: root
+    password: Tania_290106
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    database: mysql
+    show-sql: true
+    hibernate:
+      ddl-auto: create
+---
+environment: test
+spring:
+  datasource:
+    url: jdbc:h2:mem:testdb
+    username: test
+    password:
+    driver-class-name: org.h2.Driver
+  jpa:
+    database: h2
+  h2:
+    console:
+      enabled: true
